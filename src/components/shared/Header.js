@@ -18,6 +18,16 @@ const authenticatedOptions = (
 				Sign Out
 			</Link>
 		</Nav.Item>
+		<Nav.Item>
+			<Link to='create' style={linkStyle}>
+				Create a Marvel Character
+			</Link>
+		</Nav.Item>
+		<Nav.Item>
+			<Link to='marvels' style={linkStyle}>
+				Index all marvels
+			</Link>
+		</Nav.Item>
 	</>
 )
 

@@ -12,6 +12,8 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import MarvelCreate from './components/MarvelCreate'
+import MarvelIndex from './components/MarvelIndex'
 
 const App = () => {
 
@@ -68,6 +70,20 @@ const App = () => {
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
+		  <Route
+		  	path='/create'
+			element={
+				<RequireAuth user={user}>
+					<MarvelCreate msgAlert={msgAlert} user={user} />
+				</RequireAuth>}
+			/>
+			<Route
+				path='/marvels'
+				element={
+					<RequireAuth user={user}>
+						<MarvelIndex msgAlert={msgAlert} user={user} />
+					</RequireAuth>}
+				/>
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
